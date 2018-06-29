@@ -1,0 +1,49 @@
+<div class="menu-editor__item" :class="item.isHidden ? 'menu-editor__item--hidden' : ''">
+    <div class="menu-editor__item-head">
+        <div class="elgg-row is-vcentered">
+            <div class="menu-editor__handle cursor--draggable">
+                <elgg-icon name="arrows-alt"></elgg-icon>
+            </div>
+            <div class="elgg-col-1of3" @click="toggleForm">
+                <elgg-icon v-if="item.icon" :name="item.icon" class="is-display-inline-block"></elgg-icon>
+                <h4 v-text="item.text" class="is-display-inline-block"></h4>
+                <elgg-icon v-if="item.icon_alt" :name="item.icon_alt" class="is-display-inline-block"></elgg-icon>
+            </div>
+            <ul class="menu-editor__actions elgg-menu is-horizontal is-last">
+                <li v-if="item.isCustom">
+                    <a @click.prevent="deleteItem">
+                        <elgg-icon name="trash" color="danger"></elgg-icon>
+                    </a>
+                </li>
+                <li>
+                    <a @click.prevent="toggleForm">
+                        <elgg-icon v-if="isEditing" name="angle-down"></elgg-icon>
+                        <elgg-icon v-else name="angle-right"></elgg-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <transition
+            enter-active-class="animated flipInX"
+            leave-active-class="animated flipOutX"
+            :duration="250"
+        >
+            <menu-editor-form v-if="isEditing" :item.sync="item"/>
+        </transition>
+    </div>
+
+    <div class="menu-editor__item-body">
+        <draggable v-model="item.children" :options="draggableOptions">
+            <div v-for="(item, index) in item.children" :key="index" class="menu-editor__item--draggable">
+                <transition
+                    appear
+                    appear-active-class="animated fadeIn"
+                    :duration="250"
+                >
+                    <menu-editor-item :key="index" :item.sync="item" @delete="deleteChild(index)"></menu-editor-item>
+                </transition>
+            </div>
+        </draggable>
+    </div>
+</div>

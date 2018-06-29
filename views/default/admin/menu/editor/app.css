@@ -1,0 +1,68 @@
+.menu-editor__item-head {
+	display: block;
+	margin: 0.5rem;
+	padding: 0.5rem 1rem;
+	border: 1px solid $(border-color-soft);
+	border-radius: 3px;
+	background: $(background-color-soft);
+	.elgg-field {
+		margin: 0;
+	}
+}
+
+.menu-editor__item--hidden {
+	.menu-editor__item-head {
+		opacity: 0.7;
+	}
+}
+
+
+.menu-editor__item-body {
+	margin-left: 3rem;
+}
+
+.menu-editor__item-form {
+	margin: 1rem -0.5rem 0;
+	padding: 0.5rem 1rem;
+	border: 1px solid $(border-color-soft);
+	background: #fff;
+	border-radius: 3px;
+}
+
+.menu-editor__menu a {
+	margin-left: 0.5rem;
+	padding: 0.5rem;
+	display: inline-block;
+}
+
+.menu-editor__footer {
+	padding: 1rem;
+	margin-top: 1rem;
+	border-top: 1px solid $(border-color-soft);
+}
+
+.menu-editor__magic-vars {
+	font-size: 85%;
+	margin: 0.25rem;
+}
+
+.menu-editor__magic-vars > li {
+	display: inline-block;
+}
+
+.menu-editor__magic-var {
+	margin: 0.1rem;
+	padding: 0.125rem 0.25rem;
+	display: inline-block;
+	background: $(background-color-soft);
+	border-radius: 3px;
+	color: #000;
+}
+
+.menu-editor .elgg-field {
+	margin: 0;
+}
+
+.cursor--draggable {
+	cursor: move;
+}

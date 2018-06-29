@@ -1,0 +1,30 @@
+<div class="menu-editor__section elgg-module elgg-module-aside">
+    <div class="elgg-head">
+        <elgg-input-contenteditable
+            component="h3"
+            v-model="section.name"
+        />
+    </div>
+
+    <div class="elgg-body">
+        <draggable v-model="section.items" :options="draggableOptions">
+            <div v-for="(item, index) in section.items" :key="index" class="menu-editor__item--draggable">
+                <transition
+                    appear
+                    appear-active-class="animated fadeIn"
+                    :duration="250"
+                >
+                    <menu-editor-item :key="index" :item.sync="item" @delete="deleteItem(index)"></menu-editor-item>
+                </transition>
+            </div>
+        </draggable>
+    </div>
+
+    <div class="menu-editor__menu elgg-foot">
+        <a class="menu-editor__add-item" @click="addItem">
+            <i class="fas fa-plus"></i>
+            <span>{{ echo('menu:editor:add_item') }}</span>
+        </a>
+    </div>
+
+</div>

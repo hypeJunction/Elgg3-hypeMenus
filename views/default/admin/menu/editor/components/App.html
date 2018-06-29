@@ -1,0 +1,23 @@
+<div class="menu-editor">
+
+    <template v-for="section in sections">
+        <menu-editor-section :key="section.name" :section.sync="section"></menu-editor-section>
+    </template>
+
+    <div class="menu-editor__menu">
+        <a class="menu-editor__add-section" @click.prevent="addSection">
+            <i class="fas fa-plus"></i>
+            <span>{{ echo('menu:editor:add_section') }}</span>
+        </a>
+    </div>
+
+    <div class="menu-editor__footer elgg-foot">
+        <elgg-button
+            role="submit"
+            :text="echo('save')"
+            @click="save"
+            :loading="loading"
+            :disabled="loading"
+        ></elgg-button>
+    </div>
+</div>

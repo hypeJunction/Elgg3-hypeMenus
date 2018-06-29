@@ -1,0 +1,114 @@
+<div class="menu-editor__item-form">
+    <div class="elgg-columns has-padding">
+        <ul class="elgg-col-1of1 elgg-menu is-horizontal">
+            <li>
+                <label>
+                    <input type="checkbox"
+                           v-model="isParent"
+                           :disabled="isParent"
+                    />
+                    <span>{{ echo('menu:item:is_parent') }}</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox"
+                           v-model="item.isHidden"
+                    />
+                    <span>{{ echo('menu:item:is_hidden') }}</span>
+                </label>
+            </li>
+        </ul>
+
+        <div class="elgg-col-1of3">
+            <elgg-input-text
+                v-model="item.icon"
+                :label="echo('menu:item:icon')"
+                :help="echo('menu:item:icon:help')"
+            />
+        </div>
+
+        <div class="elgg-col-1of3">
+            <elgg-input-text
+                v-model="item.icon_alt"
+                :label="echo('menu:item:icon_alt')"
+                :help="echo('menu:item:icon:help')"
+            />
+        </div>
+
+        <div class="elgg-col-1of3">
+            <elgg-input-select
+                v-model="item.access"
+                :label="echo('menu:item:access')"
+                :help="echo('menu:item:access:help')"
+                :options="accessOptions"
+            />
+        </div>
+
+        <template v-if="item.isCustom">
+            <div class="elgg-col-1of2">
+                <elgg-input-text
+                    v-model="item.text"
+                    :label="echo('menu:item:text')"
+                    :help="echo('menu:item:text:help')"
+                />
+            </div>
+
+            <div class="elgg-col-1of2">
+                <elgg-input-text
+                    v-model="item.tooltip"
+                    :label="echo('menu:item:title')"
+                    :help="echo('menu:item:title:help')"
+                />
+            </div>
+
+            <div class="elgg-col-1of1">
+                <elgg-input-radio
+                    v-model="item.linkType"
+                    :options="linkTypeOptions"
+                />
+                <transition
+                    enter-active-class="animated fadeIn"
+                    :duration="250"
+                >
+                    <div key="static-link" v-if="item.linkType === 'static'">
+                        <elgg-input-text
+                            v-model="item.href"
+                            type="url"
+                        >
+                        </elgg-input-text>
+                        <ul class="menu-editor__magic-vars" slot="after">
+                            <li class="is-display-inline-block">{{ echo('menu:magic:insert') }}</li>
+                            <li v-for="magicVar in magicVars">
+                                <a class="menu-editor__magic-var is-display-inline-block"
+                                   :title="echo('menu:magic:' + magicVar)"
+                                   @click="insertVar(magicVar)"
+                                >
+                                    {{ '\{\{' + magicVar + '\}\}' }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </transition>
+                <transition
+                    enter-active-class="animated fadeIn"
+                    :duration="250"
+                >
+                    <div key="entity-link" v-if="item.linkType === 'entity'">
+                        <elgg-input-guids
+                            v-model="item.linksTo"
+                            :multiple="false"
+                            :placeholder="echo('menu:link_type:entity:placeholder')"
+                        />
+                    </div>
+                </transition>
+            </div>
+
+        </template>
+
+        <p v-else class="elgg-text-help elgg-col-1of1">
+            {{ echo('menu:item:limited_settings') }}
+        </p>
+
+    </div>
+</div>
