@@ -109,6 +109,12 @@ class RegisterCustomItems {
 			$item->icon_alt = $icon_alt;
 
 			switch ($access) {
+				case 'guest' :
+					if ($user) {
+						$isHidden = true;
+					}
+					break;
+
 				case 'logged_in' :
 					if (!$user) {
 						$isHidden = true;

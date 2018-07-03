@@ -33,6 +33,10 @@ define(function (require) {
 						label: elgg.echo('access:label:public')
 					},
 					{
+						value: 'guest',
+						label: elgg.echo('access:label:guest')
+					},
+					{
 						value: 'logged_in',
 						label: elgg.echo('access:label:logged_in')
 					},

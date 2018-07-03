@@ -43,4 +43,6 @@ return [
 	'menu:item:access:help' => 'Restrict the visibility of the menu item',
 
 	'menu:access:admin' => 'Administrators',
+
+	'access:label:guest' => 'Guests only',
 ];
