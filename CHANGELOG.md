@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.0.1...1.0.2) (2018-07-07)
+
+
+### Bug Fixes
+
+* **menus:** add walled garden menu to customizable list ([5dcb330](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/commit/5dcb330))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.0.0...1.0.1) (2018-07-03)
 
