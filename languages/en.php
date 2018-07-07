@@ -8,6 +8,7 @@ return [
 	'admin:menus:site' => 'Site',
 	'admin:menus:footer' => 'Footer',
 	'admin:menus:topbar' => 'Topbar',
+	'admin:menus:walled_garden' => 'Walled Garden',
 
 	'menu:editor:add_section' => 'Add Section',
 	'menu:editor:add_item' => 'Add Item',

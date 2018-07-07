@@ -38,6 +38,7 @@ class MenuEditor {
 			'site',
 			'footer',
 			'topbar',
+			'walled_garden',
 		];
 
 		return elgg_trigger_plugin_hook('menus', 'menu:editor', null, $menu_names);
