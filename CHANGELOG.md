@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.0.3...1.1.0) (2018-07-09)
+
+
+### Features
+
+* **config:** make link and item class customizable ([0685155](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/commit/0685155))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.0.2...1.0.3) (2018-07-09)
 
