@@ -39,7 +39,6 @@ class RegisterCustomItems {
 			$section = 'default',
 			$parent_name = null
 		) use ($menu, $customizable, &$push) {
-
 			$text = elgg_extract('text', $item_config);
 			$name = elgg_extract('name', $item_config);
 			if (!$name) {
@@ -55,6 +54,12 @@ class RegisterCustomItems {
 			$linkType = elgg_extract('linkType', $item_config);
 			$linksTo = elgg_extract('linksTo', $item_config);
 			$access = elgg_extract('access', $item_config);
+
+			$children = elgg_extract('children', $item_config, []);
+			
+			if (!$menu->has($name) && !$isCustom && empty($children)) {
+				return;
+			}
 
 			$user = elgg_get_logged_in_user_entity();
 			$page_owner = elgg_get_page_owner_entity() ? : $user;
@@ -133,7 +138,6 @@ class RegisterCustomItems {
 			}
 
 			$child_priority = 100;
-			$children = elgg_extract('children', $item_config, []);
 			if (!empty($children)) {
 				foreach ($children as $child) {
 					$push($child, $child_priority, $section, $name);
