@@ -1,3 +1,13 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.0.2...1.0.3) (2018-07-09)
+
+
+### Bug Fixes
+
+* **config:** correctly remove unregistered core items from config ([8c94a0d](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/commit/8c94a0d))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.0.1...1.0.2) (2018-07-07)
 
