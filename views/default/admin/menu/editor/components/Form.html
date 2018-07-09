@@ -62,6 +62,22 @@
                 />
             </div>
 
+            <div class="elgg-col-1of2">
+                <elgg-input-text
+                    v-model="item.item_class"
+                    :label="echo('menu:item:item_class')"
+                    :help="echo('menu:item:item_class:help')"
+                />
+            </div>
+
+            <div class="elgg-col-1of2">
+                <elgg-input-text
+                    v-model="item.link_class"
+                    :label="echo('menu:item:link_class')"
+                    :help="echo('menu:item:link_class:help')"
+                />
+            </div>
+
             <div class="elgg-col-1of1">
                 <elgg-input-radio
                     v-model="item.linkType"

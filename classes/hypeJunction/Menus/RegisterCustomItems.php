@@ -48,6 +48,8 @@ class RegisterCustomItems {
 			$icon = elgg_extract('icon', $item_config);
 			$icon_alt = elgg_extract('icon_alt', $item_config);
 			$title = elgg_extract('title', $item_config);
+			$item_class = elgg_extract('item_class', $item_config);
+			$link_class = elgg_extract('link_class', $item_config);
 
 			$isCustom = (bool) elgg_extract('isCustom', $item_config);
 			$isHidden = (bool) elgg_extract('isHidden', $item_config);
@@ -56,7 +58,7 @@ class RegisterCustomItems {
 			$access = elgg_extract('access', $item_config);
 
 			$children = elgg_extract('children', $item_config, []);
-			
+
 			if (!$menu->has($name) && !$isCustom && empty($children)) {
 				return;
 			}
@@ -102,6 +104,8 @@ class RegisterCustomItems {
 				]);
 			}
 
+			$item->setLinkClass($link_class);
+			$item->setItemClass($item_class);
 			$item->setParentName($parent_name);
 			$item->setSection($section);
 			$item->setPriority($priority);

@@ -81,6 +81,8 @@ class MenuEditor {
 				'title' => $item->getTooltip(),
 				'icon' => $icon,
 				'icon_alt' => $icon_alt,
+				'item_class' => $item_class,
+				'link_class' => $link_class,
 				'children' => array_map($to_array, $item->getChildren()),
 
 				'linkType' => $item->linkType,

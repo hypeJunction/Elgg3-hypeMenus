@@ -7,6 +7,8 @@ define(function (require) {
 			title: '',
 			icon: '',
 			icon_alt: '',
+			item_class: '',
+			link_class: '',
 			children: [],
 			linksTo: null,
 			linkType: 'static',
