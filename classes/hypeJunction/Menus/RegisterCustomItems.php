@@ -104,8 +104,14 @@ class RegisterCustomItems {
 				]);
 			}
 
-			$item->setLinkClass($link_class);
-			$item->setItemClass($item_class);
+			if ($link_class) {
+				$item->setLinkClass($link_class);
+			}
+
+			if ($item_class) {
+				$item->setItemClass($item_class);
+			}
+			
 			$item->setParentName($parent_name);
 			$item->setSection($section);
 			$item->setPriority($priority);

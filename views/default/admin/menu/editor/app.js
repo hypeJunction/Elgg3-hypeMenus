@@ -16,7 +16,7 @@ define(function(require) {
 	require('admin/menu/editor/components/Form');
 
 	var vm = new Vue({
-		el: '#menu-editor-app',
+		el: '#menu-editor-app'
 	});
 
 	return vm;

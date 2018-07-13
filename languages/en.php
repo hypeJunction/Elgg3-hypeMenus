@@ -26,7 +26,7 @@ return [
 	'menu:item:item_class:help' => 'CSS classes to add to the menu item element',
 
 	'menu:item:link_class' => 'Link Classes',
-	'menu:item:link_classes:help' => 'CSS classes to add to the menu item anchor element',
+	'menu:item:link_class:help' => 'CSS classes to add to the menu item anchor element',
 
 	'menu:item:is_parent' => 'Parent item',
 	'menu:item:is_hidden' => 'Hidden item',
