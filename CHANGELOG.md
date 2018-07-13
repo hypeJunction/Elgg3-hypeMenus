@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.1.0...1.1.1) (2018-07-13)
+
+
+### Bug Fixes
+
+* **menus:** only set custom CSS classes if provided ([363c001](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/commit/363c001))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.0.3...1.1.0) (2018-07-09)
 
