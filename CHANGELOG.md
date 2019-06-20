@@ -1,3 +1,13 @@
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/hypeJunction/Elgg3-hypeMenus/compare/1.1.2...1.1.3) (2019-06-20)
+
+
+### Bug Fixes
+
+* **releases:** set correct github package url ([0cff0cf](https://github.com/hypeJunction/Elgg3-hypeMenus/commit/0cff0cf))
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.1.1...1.1.2) (2019-06-20)
 
