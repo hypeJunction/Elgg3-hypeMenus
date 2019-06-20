@@ -36,6 +36,8 @@ class Bootstrap extends PluginBootstrap {
 		elgg_register_plugin_hook_handler('register', 'menu:page', PageMenu::class);
 		elgg_register_plugin_hook_handler('register', 'all', RegisterCustomItems::class, 900);
 
+		elgg_unregister_plugin_hook_handler('prepare', 'menu:site', '_elgg_site_menu_setup');
+
 		elgg_register_css('menu-editor-app', elgg_get_simplecache_url('admin/menu/editor/app.css'));
 	}
 
