@@ -1,3 +1,13 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.1.1...1.1.2) (2019-06-20)
+
+
+### Bug Fixes
+
+* **site:** get rid of site prepare hook ([204f16d](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/commit/204f16d))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/hypeJunctionPro/Elgg3-hypeMenus/compare/1.1.0...1.1.1) (2018-07-13)
 
